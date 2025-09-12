@@ -238,7 +238,7 @@ const DonorRequests = ({
                     <FileText className="w-16 h-16 text-blue-500 mx-auto" />
                     <p className="text-gray-600">PDF Prescription</p>
                     <a
-                      href={`https://medishareforeveryone.onrender.com/${selectedPrescription}`}
+                      href={`https://medishare-s5g9.onrender.com/${selectedPrescription}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors inline-block"
@@ -248,7 +248,7 @@ const DonorRequests = ({
                   </div>
                 ) : (
                   <img
-                    src={`https://medishareforeveryone.onrender.com/${selectedPrescription}`}
+                    src={`https://medishare-s5g9.onrender.com/${selectedPrescription}`}
                     alt="Prescription"
                     className="max-w-full h-auto rounded-lg"
                   />
