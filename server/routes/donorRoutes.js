@@ -1,0 +1,21 @@
+const express = require("express")
+const router = express.Router()
+const donorController = require("../controllers/donorController")
+const auth = require("../middleware/auth")
+
+router.get("/profile", auth, donorController.getProfile)
+router.put("/profile", auth, donorController.updateProfile)
+router.get("/medicines", auth, donorController.getMedicines)
+router.post("/medicines", auth, donorController.addMedicine)
+router.put("/medicines/:id", auth, donorController.updateMedicine)
+router.delete("/medicines/:id", auth, donorController.deleteMedicine)
+router.delete("/medicines-expired", auth, donorController.deleteExpiredMedicines)
+router.get("/needy-requests", auth, donorController.getNeedyRequests)
+router.put("/change-password", auth, donorController.changePassword)
+router.get("/stats", auth, donorController.getDashboardStats)
+router.get("/requests", auth, donorController.getAllRequests)
+router.put("/requests/:requestId/approve", auth, donorController.approveDonationRequest)
+router.put("/requests/:requestId/reject", auth, donorController.rejectDonationRequest)
+router.put("/requests/:requestId/complete", auth, donorController.completeDonationRequest)
+
+module.exports = router
